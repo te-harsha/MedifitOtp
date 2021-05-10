@@ -1,0 +1,27 @@
+<div class="container">
+   <div class="col-md-4">
+    <h1 class="text-center">
+        <br>
+          LogIn
+      </h1>
+      <br>
+      <form #loginEmail="ngForm" (ngSubmit)="getOtp(loginEmail)">
+        <div class="form-group">
+            <input class="form-control" type="email" name="EmailId"  ngModel #EmailId="ngModel" required placeholder="Enter Email:">
+        </div>
+        <h5 class="text-center">OR login Using Number</h5>
+
+        <div class="form-group">
+            <input class="form-control" type="number" name="phoneNo"  ngModel #phoneNo="ngModel" required placeholder="Phone No">
+        </div>
+        <div class="form-group" style="display: none;">
+            <input class="form-control" type="number" name="otp"  [(ngModel)]="otp" >
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-block btn-danger" (click)="getotpval()">
+                Login
+            </button>
+        </div>
+    </form>
+   </div>
+</div>

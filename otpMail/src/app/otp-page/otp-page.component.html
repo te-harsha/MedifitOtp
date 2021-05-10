@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="col-md-4">
+     <h1 class="text-center">
+         <br>
+           OTP
+       </h1>
+       <br>
+       <form #otpEntered="ngForm" (ngSubmit)="otpVerifyfunc(otpEntered)">
+         <div class="form-group">
+             <input class="form-control" type="number" name="otpVerify"  ngModel #otpVerify="ngModel" required placeholder="Enter OTP">
+         </div>
+    
+         <div class="form-group">
+             <button type="submit" class="btn btn-block btn-danger">
+                 Verify
+             </button>
+         </div>
+     </form>
+    </div>
+ </div>
